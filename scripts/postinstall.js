@@ -6,17 +6,17 @@
 
 "use strict";
 
-import gentlyCopy from "gently-copy";
+var ncp = require("ncp").ncp;
 
-var filesToCopy = [
-  "../commitlint.config.js",
-  "../commitlint.scope.js",
-  "../commitlint.types.js",
-  "../.huskyrc"
-];
+ncp.limit = 16;
+
+ncp(".", userPath);
+
+var filesToCopy = new RegExp("(commitlint..*.js)|.huskyrc", "ig");
 
 // User's local directory
 var userPath = process.env.INIT_CWD;
 
 // Moving files to user's local directory
-gentlyCopy(filesToCopy, userPath);
+
+ncp(".", userPath, { clobber: false, filter: filesToCopy });

@@ -1,0 +1,33 @@
+{
+  "name": "@rto-websites/commitlint-config-rto",
+  "version": "1.0.0",
+  "description": "Shareable Commitlint config used by RTO-Websites including some gimmicks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RTO-Websites/commitlint-config-rto.git"
+  },
+  "keywords": [
+    "commitlint",
+    "husky"
+  ],
+  "author": "RTO GmbH <https://github.com/RTO-Websites>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/RTO-Websites/commitlint-config-rto/issues"
+  },
+  "homepage": "https://github.com/RTO-Websites/commitlint-config-rto#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "husky": "^4.2.3"
+  },
+  "dependencies": {
+    "gently-copy": "^3.2.0"
+  }
+}

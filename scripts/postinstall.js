@@ -5,18 +5,18 @@
  */
 
 "use strict";
-
-var ncp = require("ncp").ncp;
-
-ncp.limit = 16;
-
-ncp(".", userPath);
-
-var filesToCopy = new RegExp("(commitlint..*.js)|.huskyrc", "ig");
+console.log("Starting directory:", process.env.INIT_CWD);
+let gentlyCopy = require("gently-copy");
+var filesToCopy = [
+  process.cwd() + "/scripts/.huskyrc",
+  process.cwd() + "/scripts/commitlint.config.js",
+  process.cwd() + "/scripts/commitlint.scope.js",
+  process.cwd() + "/scripts/commitlint.types.js"
+];
 
 // User's local directory
 var userPath = process.env.INIT_CWD;
 
 // Moving files to user's local directory
-
-ncp(".", userPath, { clobber: false, filter: filesToCopy });
+gentlyCopy(filesToCopy, userPath);
+return 0;

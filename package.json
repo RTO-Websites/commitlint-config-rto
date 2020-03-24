@@ -33,5 +33,22 @@
     "peerDependencies": {
         "husky": "4.2.3",
         "@commitlint/cli": "8.3.5"
+    },
+    "devDependencies": {
+        "@semantic-release/changelog": "^5.0.0",
+        "@semantic-release/git": "^9.0.0",
+        "semantic-release": "^17.0.4"
+    },
+    "release": {
+        "branches": [
+            "master"
+        ],
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/npm",
+            "@semantic-release/github",
+            "@semantic-release/git"
+        ]
     }
 }

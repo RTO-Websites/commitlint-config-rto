@@ -5,7 +5,10 @@
  */
 
 "use strict";
+if (process.env.CI) return 0;
+
 console.log("Starting directory:", process.env.INIT_CWD);
+
 let gentlyCopy = require("gently-copy");
 var filesToCopy = [
   process.cwd() + "/scripts/.huskyrc",

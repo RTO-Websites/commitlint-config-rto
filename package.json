@@ -1,36 +1,37 @@
 {
-  "name": "@rto-websites/commitlint-config-rto",
-
-  "version": "1.0.2",
-
-  "description": "Shareable Commitlint config used by RTO-Websites including some gimmicks.",
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "scripts/"
-  ],
-  "scripts": {
-    "install": "node ./scripts/postinstall.js ",
-    "postinstall": "npm i -D husky @commitlint/cli  "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RTO-Websites/commitlint-config-rto.git"
-  },
-  "keywords": [
-    "commitlint",
-    "husky"
-  ],
-  "author": "RTO GmbH <https://github.com/RTO-Websites>",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/RTO-Websites/commitlint-config-rto/issues"
-  },
-  "homepage": "https://github.com/RTO-Websites/commitlint-config-rto#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "dependencies": {
-    "gently-copy": "^3.2.0"
-  }
+    "name": "@rto-websites/commitlint-config-rto",
+    "version": "1.0.2",
+    "description": "Shareable Commitlint config used by RTO-Websites including some gimmicks.",
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "scripts/"
+    ],
+    "scripts": {
+        "install": "node ./scripts/postinstall.js "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RTO-Websites/commitlint-config-rto.git"
+    },
+    "keywords": [
+        "commitlint",
+        "husky"
+    ],
+    "author": "RTO GmbH <https://github.com/RTO-Websites>",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/RTO-Websites/commitlint-config-rto/issues"
+    },
+    "homepage": "https://github.com/RTO-Websites/commitlint-config-rto#readme",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "dependencies": {
+        "gently-copy": "^3.2.0"
+    },
+    "peerDependencies": {
+        "husky": "4.2.3",
+        "@commitlint/cli": "8.3.5"
+    }
 }

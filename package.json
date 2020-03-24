@@ -1,10 +1,17 @@
 {
   "name": "@rto-websites/commitlint-config-rto",
-  "version": "1.0.1",
+
+  "version": "1.0.2",
+
   "description": "Shareable Commitlint config used by RTO-Websites including some gimmicks.",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "scripts/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "node ./scripts/postinstall.js ",
+    "postinstall": "npm i -D husky @commitlint/cli  "
   },
   "repository": {
     "type": "git",
@@ -24,6 +31,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "ncp": "^2.0.0"
+    "gently-copy": "^3.2.0"
   }
 }

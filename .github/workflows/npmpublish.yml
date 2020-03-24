@@ -1,16 +1,25 @@
+name: Release
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 jobs:
-  publish:
-    runs-on: ubuntu-latest
-
+  release:
+    name: Release
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
-          registry-url: "https://npm.pkg.github.com"
-      - run: npm publish
+          node-version: 12
+      - name: Install dependencies
+        env: 
+          CI: true
+        run: npm ci     
+      - name: Release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
+        run: npx semantic-release

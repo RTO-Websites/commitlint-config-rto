@@ -1,6 +1,8 @@
 {
   "name": "@rto-websites/commitlint-config-rto",
+
   "version": "1.0.2",
+
   "description": "Shareable Commitlint config used by RTO-Websites including some gimmicks.",
   "main": "index.js",
   "files": [

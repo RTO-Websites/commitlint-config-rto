@@ -28,7 +28,6 @@
         "registry": "https://npm.pkg.github.com/"
     },
     "dependencies": {
-        "conventional-changelog-conventionalcommits": "^4.2.3",
         "gently-copy": "^3.2.0"
     },
     "peerDependencies": {

@@ -12,9 +12,7 @@ console.log("Starting directory:", process.env.INIT_CWD);
 let gentlyCopy = require("gently-copy");
 var filesToCopy = [
   process.cwd() + "/scripts/.huskyrc",
-  process.cwd() + "/scripts/commitlint.config.js",
-  process.cwd() + "/scripts/commitlint.scope.js",
-  process.cwd() + "/scripts/commitlint.types.js"
+  process.cwd() + "/scripts/commitlint.config.js"
 ];
 
 // User's local directory
